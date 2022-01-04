@@ -23,7 +23,7 @@ export default function CouseList() {
           <li key={crypto.randomUUID()}>{course}</li>
         )}
       </ul>
-      <button onClick={addCourse} >Adiconar curso</button>
+      <button onClick={addCourse} >Adicionar curso</button>
     </>
   );
 }

@@ -1,9 +1,7 @@
 import { createStore } from 'redux';
 
 const INITIAL_STATE = {
-  data: [
-    'REACT', 'RN',
-  ]
+  data: []
 }
 
 const courses = (state = INITIAL_STATE, action) => {
