@@ -1,13 +1,19 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
+const technologies = ['REACT', 'REACT NATIVE', 'JAVA', 'RUBY', 'GO', 'NODE', 'C', 'C++', 'PASCAL', 'FORTAN', 'C#', 'PYTHON'];
+
 export default function CouseList() {
 
-  const courses = useSelector(state => state.data,);
+  const courses = useSelector(state => state.data);
   const dispatch = useDispatch();
 
   const addCourse = () => {
-    dispatch({ type: 'ADD_COURSES', title: 'GO' })
+    dispatch({ type: 'ADD_COURSES', technologie: getTechnologie() })
+  }
+
+  const getTechnologie = () => {
+    return technologies[Math.floor(Math.random() * (technologies.length + 1))]
   }
 
   return (
